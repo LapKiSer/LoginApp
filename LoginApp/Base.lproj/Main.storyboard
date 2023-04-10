@@ -23,7 +23,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qp2-76-yen">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="118.5"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dSw-sL-QOa">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dSw-sL-QOa">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
@@ -39,6 +39,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="LOG IN"/>
                                                 <connections>
                                                     <action selector="logInTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0U-6U-cgz"/>
+                                                    <segue destination="nep-gF-dcS" kind="presentation" modalPresentationStyle="fullScreen" id="g4P-y2-OeV"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -79,7 +80,6 @@
                     <connections>
                         <outlet property="passwordTF" destination="JDz-Tb-IdE" id="Joh-Sm-fxe"/>
                         <outlet property="userNameTF" destination="dSw-sL-QOa" id="8ge-gO-W37"/>
-                        <segue destination="nep-gF-dcS" kind="presentation" identifier="showWelkomeVC" modalPresentationStyle="fullScreen" id="8js-rj-cfx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -137,7 +137,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GkY-b6-lMb"/>
                     <connections>
-                        <outlet property="welcomeText" destination="NU5-9m-f4j" id="wVg-kE-AFy"/>
+                        <outlet property="welcomeTextLabel" destination="NU5-9m-f4j" id="wVg-kE-AFy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13v-tJ-vNb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
