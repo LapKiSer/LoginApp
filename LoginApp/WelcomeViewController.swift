@@ -9,13 +9,18 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet var welcomeText: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func logOutAction() {
+        dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -7,10 +7,22 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
 
+    @IBOutlet var userNameTF: UITextField!
+    @IBOutlet var passwordTF: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    @IBAction func logInTaped(_ sender: Any) {
+    }
+    
+    @IBAction func forgotUserTaped(_ sender: Any) {
+    }
+    
+    @IBAction func forgotPasswordTaped(_ sender: Any) {
     }
 }
 

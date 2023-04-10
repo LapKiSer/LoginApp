@@ -37,6 +37,9 @@
                                                 <rect key="frame" x="0.0" y="84" width="280" height="34.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="LOG IN"/>
+                                                <connections>
+                                                    <action selector="logInTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0U-6U-cgz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -47,11 +50,18 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="54.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot User?"/>
+                                                <connections>
+                                                    <action selector="forgotUserTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e7N-vx-DQJ"/>
+                                                    <action selector="logInTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h40-BY-Tm3"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awc-Df-y8o">
                                                 <rect key="frame" x="140" y="0.0" width="140" height="54.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
+                                                <connections>
+                                                    <action selector="forgotPasswordTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F1A-4V-GU9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -67,6 +77,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordTF" destination="JDz-Tb-IdE" id="Joh-Sm-fxe"/>
+                        <outlet property="userNameTF" destination="dSw-sL-QOa" id="8ge-gO-W37"/>
                         <segue destination="nep-gF-dcS" kind="presentation" identifier="showWelkomeVC" modalPresentationStyle="fullScreen" id="8js-rj-cfx"/>
                     </connections>
                 </viewController>
@@ -109,6 +121,9 @@
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                             <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="logOutAction" destination="nep-gF-dcS" eventType="touchUpInside" id="GqM-oC-vcg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -121,6 +136,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GkY-b6-lMb"/>
+                    <connections>
+                        <outlet property="welcomeText" destination="NU5-9m-f4j" id="wVg-kE-AFy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13v-tJ-vNb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
