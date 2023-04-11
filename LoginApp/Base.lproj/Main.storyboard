@@ -39,7 +39,6 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="LOG IN"/>
                                                 <connections>
                                                     <action selector="logInTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0U-6U-cgz"/>
-                                                    <segue destination="nep-gF-dcS" kind="presentation" modalPresentationStyle="fullScreen" id="g4P-y2-OeV"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -80,6 +79,7 @@
                     <connections>
                         <outlet property="passwordTF" destination="JDz-Tb-IdE" id="Joh-Sm-fxe"/>
                         <outlet property="userNameTF" destination="dSw-sL-QOa" id="8ge-gO-W37"/>
+                        <segue destination="nep-gF-dcS" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="VvU-Fq-aZe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -122,7 +122,7 @@
                                             <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="logOutAction" destination="nep-gF-dcS" eventType="touchUpInside" id="GqM-oC-vcg"/>
+                                            <segue destination="3XW-CY-EhH" kind="unwind" unwindAction="unwindFor:" id="fGM-8X-Yka"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -141,6 +141,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13v-tJ-vNb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="3XW-CY-EhH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="648.75" y="-86.619718309859152"/>
         </scene>

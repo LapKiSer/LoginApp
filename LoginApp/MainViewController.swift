@@ -11,7 +11,7 @@ final class MainViewController: UIViewController {
 
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-    
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.welcomeText = "Welcome \(userNameTF.text ?? "")!"
@@ -22,7 +22,7 @@ final class MainViewController: UIViewController {
         guard let passwordTF = passwordTF.text else { return }
         
         userNameTF == "User" && passwordTF == "Password" ?
-        showAlert(withTitle: "", andMessage: "") :
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil) :
         showAlert(withTitle: "User name or Password WRONG", andMessage: "Please enter correct data!")
     }
     
@@ -43,9 +43,5 @@ final class MainViewController: UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
-    
-        
-
 }
 
